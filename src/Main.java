@@ -4,11 +4,9 @@ import java.io.*;
 
 
 public class Main {
-    public static void main(String[] args) throws IOException
-    {
+    public static void main(String[] args) throws IOException {
 
-        EventQueue.invokeLater(new Runnable()
-        {
+        EventQueue.invokeLater(new Runnable() {
             public void run() {
                 JFrame frame = new NFrame();
                 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

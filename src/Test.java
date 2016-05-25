@@ -3,7 +3,11 @@
  */
 public class Test {
     Test(){
+<<<<<<< HEAD
+        System.out.println("tes1221t-Hello");
+=======
 
         System.out.println("new changes");
+>>>>>>> master
     }
 }
