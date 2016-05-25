@@ -22,12 +22,12 @@ public class NFrame extends JFrame{
         super("Переводчик");
 
         this.setLayout(new BorderLayout());
-        //label = new JPanel();
-        //label.setLayout(new BoxLayout(label, BoxLayout.Y_AXIS));
-        //textArea = new JTextArea();
-        //textArea.setLineWrap(true);
-        //textArea.setFont(new Font("Times New Roman", Font.PLAIN, 14));
-        //JScrollPane scrollPane=new JScrollPane(textArea);
+        label = new JPanel();
+        label.setLayout(new BoxLayout(label, BoxLayout.Y_AXIS));
+        textArea = new JTextArea();
+        textArea.setLineWrap(true);
+        textArea.setFont(new Font("Times New Roman", Font.PLAIN, 14));
+        JScrollPane scrollPane=new JScrollPane(textArea);
 
 
 
@@ -42,7 +42,7 @@ public class NFrame extends JFrame{
                     file = fileopen.getSelectedFile();
                     //label.setText(file.getName());
 
-                    /*try {
+                    try {
                         analysis = new Analysis(file);
                     } catch (IOException exp) {
                         exp.printStackTrace();
@@ -56,74 +56,16 @@ public class NFrame extends JFrame{
                     {
 
                         textArea.append(currentWord.toString() + "\n");
-                    }*/
+                    }
 
 
                 }
             }
         });
 
-        JButton buttonTranslate = new JButton("Translate");
-        buttonTranslate.setAlignmentX(CENTER_ALIGNMENT);
-        buttonTranslate.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
 
-
-            try {
-                analysis = new Analysis(file);
-            } catch (IOException exp) {
-                exp.printStackTrace();
-            }
-
-            listWords = analysis.getList();
-            String[] columnNames = {"eng", "ru", "count"};
-            /*String[][] tableStr = new String[listWords.size()][3];
-
-                for (int i = 0; i < tableStr.length; i++) {
-                    tableStr[i][0] = listWords.get(i).getEngWord();
-                    tableStr[i][1] = listWords.get(i).getRuWord();
-                    tableStr[i][2] = "" + listWords.get(i).getCount();
-                }*/
-                String[][] tableStr = {
-                        {"addins", "02.11.2006 19:15", "Folder"},
-                        {"AppPatch", "03.10.2006 14:10", "Folder"},
-                        {"assembly", "02.11.2006 14:20", "Folder"},};
-
-                table = new JTable(tableStr, columnNames);
-                table.setFillsViewportHeight(true);
-                scrollPane = new JScrollPane(table);
-                add(scrollPane, BorderLayout.CENTER);
-            //textArea.append("Всего слов: - " + listWords.size() + "\n");
-
-            /*for (Word currentWord:listWords)
-            {
-
-                textArea.append(currentWord.toString() + "\n");
-            }*/
-
-            }});
-
-        Box boxWeight = Box.createVerticalBox();
-        boxWeight.add(button);
-        boxWeight.add(buttonTranslate);
-
-
-        //table.setFillsViewportHeight(true);
-        /*String[] columnNames = {"eng", "ru", "count"};
-        String[][] tableStr = {
-                {"addins", "02.11.2006 19:15", "Folder"},
-                {"AppPatch", "03.10.2006 14:10", "Folder"},
-                {"assembly", "02.11.2006 14:20", "Folder"},};
-
-        table = new JTable(tableStr, columnNames);
-        table.setFillsViewportHeight(true);
-        JScrollPane scrollPane = new JScrollPane(table);*/
-        //this.add(scrollPane, BorderLayout.CENTER);
-
-        this.add(boxWeight,BorderLayout.NORTH);
-        //this.add(scrollPane, BorderLayout.CENTER);
-        //this.add(button,BorderLayout.NORTH);
-        //this.add(buttonTranslate,BorderLayout.NORTH);
+        this.add(scrollPane, BorderLayout.CENTER);
+        this.add(button,BorderLayout.NORTH);
 
     }
 
