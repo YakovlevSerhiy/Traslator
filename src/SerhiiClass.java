@@ -3,7 +3,7 @@
  */
 public class SerhiiClass {
     void myMethod() {
-        System.out.println("My building class for Git");
+        System.out.println("My building class for Git+khkhhdsd");
     }
 
 }
