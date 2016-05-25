@@ -29,7 +29,6 @@ public class Analysis{
 
         while (bufferedReader.ready())
         {
-            //String str = bufferedReader.readLine().toLowerCase();
             Matcher matcher = pattern.matcher(bufferedReader.readLine().toLowerCase());
             while (matcher.find()) {
                 String currentWord = matcher.group();
