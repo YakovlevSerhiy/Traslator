@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Traslator:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Traslator_jar</output-path>
+    <root id="archive" name="Traslator.jar">
+      <element id="module-output" name="Traslator" />
+    </root>
+  </artifact>
+</component>
